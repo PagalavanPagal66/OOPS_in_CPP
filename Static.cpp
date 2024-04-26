@@ -12,6 +12,31 @@ public:
 	}
 };
 
+class B {
+public:
+	int* a;
+	B(int &value) {
+		a = &value;
+	}
+	void Printer() {
+		cout << *a << endl;
+	}
+	int IncreaseCounter() {
+		(*a)++;
+	}
+
+	void PrintCounter() {
+		cout << *a << endl;
+	}
+	~B() {
+		cout << a << endl;
+		free(a);
+		cout << "DELETED" << endl;
+		cout << a << endl;
+	}
+};
+
+
 static int cnt = 0;
 
 int IncreaseCounter() {
