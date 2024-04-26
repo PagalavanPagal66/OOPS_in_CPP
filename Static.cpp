@@ -7,14 +7,27 @@ public:
 	A(int value) {
 		a = value;
 	}
-	static void printer() {
+	static void Printer() {
 		cout << a << endl;
 	}
 };
+
+static int cnt = 0;
+
+int IncreaseCounter() {
+	cnt++;
+}
+
+void PrintCounter() {
+	cout << cnt << endl;
+}
 
 int A::a;
 
 int main() {
 	A a(10);
-	A::printer();
+	A::Printer();
+	IncreaseCounter();
+	IncreaseCounter();
+	PrintCounter();
 }
