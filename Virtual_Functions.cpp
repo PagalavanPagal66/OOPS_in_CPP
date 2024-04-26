@@ -7,6 +7,7 @@ public:
 	virtual void fun() {
 		cout << "A class fun" << endl;
 	}
+	string name = "A";
 	// pure -> pure virtual function
 	//virtual void pure() = 0;
 };
@@ -16,6 +17,7 @@ public:
 	virtual void fun() {
 		cout << "B class fun" << endl;
 	}
+	string name = "B";
 	void pure() {
 		cout << " B pure" << endl;
 	}
@@ -26,10 +28,10 @@ public:
 	void fun() {
 		cout << "C class fun" << endl;
 	}
+	string name = "C";
 	void pure() {
 		cout << " C pure" << endl;
 	}
-	string name = "C";
 };
 
 int32_t main() {
@@ -43,6 +45,11 @@ int32_t main() {
 	c_pointer->fun();
 	// output the updated function upto C
 
+	// The A pointer with C object
+
+	A* c_pointer2 = new C();
+	c_pointer2->fun();
+	cout << c_pointer2->name << endl;
 	//cout << c_pointer->name << endl;
 	A a;
 	a.fun();
