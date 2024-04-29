@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-class Constmethod {
+class ConstClass {
 private:
 	int value;
 	mutable int counter;
@@ -37,6 +37,6 @@ int main() {
 	const int* const ptr5 = &b;
 
 
-	Constmethod obj;
+	ConstClass obj;
 	obj.WithConstant();
 }
